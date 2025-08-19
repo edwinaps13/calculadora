@@ -3,32 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculadora Visual</title>
+  <title>Calculadora con JavaScript</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <h1>Calculadora con JavaScript</h1>
-    
-    <div class="input-section">
-      <input type="number" id="num1" placeholder="Ingrese el primer número">
-      <input type="number" id="num2" placeholder="Ingrese el segundo número">
-    </div>
-
-    <div class="buttons">
-      <button onclick="realizarOperacion('suma')">Sumar</button>
-      <button onclick="realizarOperacion('resta')">Restar</button>
-      <button onclick="realizarOperacion('multiplicacion')">Multiplicar</button>
-      <button onclick="realizarOperacion('division')">Dividir</button>
-      <button onclick="limpiar()">Limpiar</button>
-    </div>
-
-    <div class="resultado-section">
-      <p id="operacion-realizada"></p>
-      <p id="resultado"></p>
-    </div>
+    <h1>Calculadora con JavaScript (versión con while)</h1>
+    <p>La calculadora se ejecutará automáticamente usando ventanas emergentes.<br>
+       Ingresa los números y operaciones cuando aparezcan los <b>prompt</b>.<br>
+       Para salir, escribe <b>salir</b> cuando se te pida la operación.</p>
   </div>
 
+  
   <script src="script.js"></script>
 </body>
 </html>

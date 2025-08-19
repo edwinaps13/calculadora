@@ -1,6 +1,7 @@
+/* Fondo con gradiente suave */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #e9f1f7;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,53 +9,88 @@ body {
   margin: 0;
 }
 
+/* Caja principal */
 .container {
   background-color: white;
   padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   text-align: center;
   width: 90%;
-  max-width: 400px;
+  max-width: 420px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 h1 {
   margin-bottom: 1.5rem;
+  color: #333;
+  font-size: 1.8rem;
 }
 
+/* Inputs */
 .input-section input {
   padding: 10px;
   font-size: 1rem;
   width: 45%;
   margin: 5px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
+.input-section input:focus {
+  outline: none;
+  border-color: #66a6ff;
+  box-shadow: 0 0 5px rgba(102, 166, 255, 0.5);
+}
+
+/* Botones */
 .buttons {
   margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .buttons button {
-  margin: 5px;
-  padding: 10px 15px;
+  margin: 6px;
+  padding: 10px 18px;
   font-size: 1rem;
   cursor: pointer;
   border: none;
-  border-radius: 8px;
-  background-color: #4caf50;
+  border-radius: 10px;
   color: white;
-  transition: background-color 0.3s;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
+/* Colores diferentes para cada operación */
+.buttons button:nth-child(1) { background-color: #4caf50; } /* Sumar */
+.buttons button:nth-child(2) { background-color: #f44336; } /* Restar */
+.buttons button:nth-child(3) { background-color: #ff9800; } /* Multiplicar */
+.buttons button:nth-child(4) { background-color: #2196f3; } /* Dividir */
+.buttons button:nth-child(5) { background-color: #9c27b0; } /* Limpiar */
+
+/* Efecto hover */
 .buttons button:hover {
-  background-color: #45a049;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+/* Resultados */
 .resultado-section {
   margin-top: 1.5rem;
   font-size: 1.2rem;
-  color: #333;
+  color: #444;
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .resultado-section p {
